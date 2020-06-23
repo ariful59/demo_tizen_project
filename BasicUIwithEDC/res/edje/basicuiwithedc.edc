@@ -1,0 +1,52 @@
+collections {
+   group { name: "main";
+      parts {
+         part { 
+            name: "title";
+            type: TEXT;
+            description {
+               state: "default" 0.0;
+               text{
+                  size: 40;
+                  text: "Hello world";
+                  align: .5 0;
+                  ellipsis: -1;
+                  max: 0 0;
+                  max: 0 0;
+               }
+               rel1 {
+                  relative: 0 .10;
+               }
+            }
+            part { 
+               name: "image";
+               type: SWALLOW;
+               description {
+                  state: "default" 0.0;
+                  fixed: 1 1;
+                  max: 150 100;
+                  min: 150 100;
+                  rel1 {
+                     relative: 0 0; to: "title"; offset: 0 -70;
+                  } rel2{
+                     relative: 1 1; to: "title";
+                  }
+               }
+               part { 
+                  name: "button";
+                  type: SWALLOW;
+                  description {
+                     state: "default" 0.0;
+                     fixed: 1 1;
+                     max: 180 60;
+                     min: 180 60;
+                     align: .5 .5;
+                     rel1 {
+                        relative: 0 1; offset:0 120; to: "image";
+                     }
+                     rel2{
+                        relative: 1 1;to: "image";
+                     }
+                  }
+               }
+            }

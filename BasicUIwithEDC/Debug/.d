@@ -1,0 +1,1 @@
+res/edje/basicuiwithedc.edj:
